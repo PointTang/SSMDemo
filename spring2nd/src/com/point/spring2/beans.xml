@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="school" class="com.point.spring2.School">
+        <property name="id">
+            <value>10000</value>
+        </property>
+        <property name="name">
+            <value>Mua</value>
+        </property>
+    </bean>
+
+    <bean id="student" class="com.point.spring2.Student">
+        <constructor-arg index="0">
+            <value>101</value>
+        </constructor-arg>
+        <constructor-arg index="1">
+            <value>Milk</value>
+        </constructor-arg>
+        <constructor-arg index="2">
+            <list>
+                <value>course1</value>
+                <value>course2</value>
+            </list>
+        </constructor-arg>
+        <constructor-arg index="3">
+            <ref bean="school"/>
+        </constructor-arg>
+    </bean>
+</beans>

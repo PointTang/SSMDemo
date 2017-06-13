@@ -1,0 +1,23 @@
+package com.point.spring;
+
+/**
+ * Created by Point on 2017/6/12.
+ */
+public class Welcome implements Action {
+
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public void greet() {
+        System.out.println("Welcome " + name);
+
+    }
+}
