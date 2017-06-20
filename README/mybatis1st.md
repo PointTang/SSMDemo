@@ -1,11 +1,11 @@
 mybatis1st
 
-I had write a mybatis' hello world. A few steps had been done.
+It's a hello-world of mybatis. A few steps should be done.
 
-0. Before test, you should have create a mysql database with one table named 'users'. In my demo, database named 'testspringmybatis', and table 'users' has only 3 coulmns of id(primary key, int), nam(varchar), age(int).
-1. Create a maven project so that I can use some lib convenient.
+0. Before test, you should have create a mysql database with one table. In my demo, database named 'testspringmybatis'. It has a table named 'users' with only 3 coulmns: id(primary key, int), nam(varchar), age(int). I named it 'nam' instead of 'name' because that 'name' is a keyword in mysql database.
+1. Create a maven project to use some lib convenient.
 2. Create a ```SqlMapConfig.xml``` below ```/src/main/resources``` which should be loading on Java code. In this demo, I make it loaded in ```TestUser.java```.
-3. Create a ```jdbc.properties``` to save the params of database, including driver, url, username, password of your database.
+3. Create a ```jdbc.properties``` to save the params of database, including driver, url, username and password of your database.
 4. Config mybatis in ```SqlMapConfig.xml```.
     1. ```DOCTYPE``` attr can be copied.
     2. Config ```environments``` tag. If ```jdbc.properties``` has been import in a ```properties``` tag, ```${jdbc.driver}``` can be used.
@@ -28,4 +28,4 @@ Issues & Resolved:
     * Add ```resource``` of```build``` tag in ```pom.xml``` to make sure your ```/src/main/resources/``` be compiled.
     * Maybe you need to execute ```maven clean install``` before test.
 2. Sometimes your test get null from database.
-    * Make sure name of java field the same as name of table's column.
+    * Make sure the name of java model's field the same as name of table's column.
